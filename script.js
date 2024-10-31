@@ -1,4 +1,3 @@
-
 document.getElementById('requestForm').addEventListener('submit', function (event) {
     event.preventDefault(); // предотвращает перезагрузку страницы
 
@@ -9,4 +8,3 @@ document.getElementById('requestForm').addEventListener('submit', function (even
 
     alert(`Спасибо, ${name}! Ваша заявка отправлена на рассмотрение.`);
 });
-
