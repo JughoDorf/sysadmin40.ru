@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявка системному администратору</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Оставьте заявку системному администратору</h2>
+    <form id="requestForm">
+        <label for="name">ФИО:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="department">Отдел:</label>
+        <input type="text" id="department" name="department" required>
+
+        <label for="contact">Контактный номер:</label>
+        <input type="tel" id="contact" name="contact" required>
+
+        <label for="issue">Тип проблемы:</label>
+        <select id="issue" name="issue">
+            <option value="software">Проблемы с ПО</option>
+            <option value="hardware">Проблемы с оборудованием</option>
+            <option value="network">Сетевая проблема</option>
+        </select>
+
+        <label for="description">Описание проблемы:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <button type="submit">Отправить заявку</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
