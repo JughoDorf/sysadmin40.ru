@@ -4,7 +4,6 @@ document.getElementById('requestForm').addEventListener('submit', function (even
 
     const name = document.getElementById('name').value;
     const department = document.getElementById('department').value;
-    const contact = document.getElementById('contact').value;
     const issue = document.getElementById('issue').value;
     const description = document.getElementById('description').value;
 
