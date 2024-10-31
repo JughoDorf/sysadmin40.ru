@@ -38,7 +38,7 @@ p {
 /* iframe для формы */
 iframe {
     width: 100%; /* Ширина iframe */
-    height: 500px; /* Высота iframe (можете настроить под себя) */
+    height: 650px; /* Высота iframe (можете настроить под себя) */
     border: none; /* Убираем границу */
     border-radius: 5px; /* Закругленные углы */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для iframe */
