@@ -1,10 +1,20 @@
-document.getElementById('requestForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // предотвращает перезагрузку страницы
+// Функция, которая срабатывает при отправке формы
+function handleSubmit(event) {
+    event.preventDefault(); // Отменяем стандартное поведение отправки формы
 
-    const name = document.getElementById('name').value;
-    const className = document.getElementById('class').value; // изменено с department на class
-    const issue = document.getElementById('issue').value;
-    const description = document.getElementById('description').value;
+    // Здесь можно добавить дополнительные действия, например, отправку данных на сервер или валидацию
+    // Если вы хотите, чтобы отображалось сообщение об успешной отправке, используйте alert
+    alert("Ваша заявка успешно отправлена!");
 
-    alert(`Спасибо, ${name}! Ваша заявка отправлена на рассмотрение.`);
-});
+    // Можно также очистить форму после отправки, если это необходимо
+    // document.querySelector('form').reset(); // Если у вас есть форма в HTML
+}
+
+// Добавляем обработчик события на загрузку страницы
+window.onload = function() {
+    // Находим кнопку отправки и добавляем обработчик события
+    const submitButton = document.querySelector('button');
+    if (submitButton) {
+        submitButton.addEventListener('click', handleSubmit);
+    }
+};
