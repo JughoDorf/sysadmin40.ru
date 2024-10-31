@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Оставьте заявку системному администратору</h2>
-    <form id="requestForm">
-        <label for="name">ФИО:</label>
-        <input type="text" id="name" name="name" required>
+    <div class="container">
+        <h2>Оставьте заявку системному администратору</h2>
+        <p>Заполните форму ниже, чтобы отправить заявку на техническую поддержку</p>
+        <form id="requestForm">
+            <label for="name">ФИО:</label>
+            <input type="text" id="name" name="name" required placeholder="Введите ваше полное имя">
 
-        <label for="department">Кабинет:</label>
-        <input type="text" id="department" name="department" required>
+            <label for="department">Отдел:</label>
+            <input type="text" id="department" name="department" required placeholder="Например, Отдел кадров">
 
-        <label for="issue">Тип проблемы:</label>
-        <select id="issue" name="issue">
-            <option value="software">Проблемы с ПО</option>
-            <option value="hardware">Проблемы с оборудованием</option>
-            <option value="network">Сетевая проблема</option>
-        </select>
+            <label for="issue">Тип проблемы:</label>
+            <select id="issue" name="issue">
+                <option value="software">Проблемы с ПО</option>
+                <option value="hardware">Проблемы с оборудованием</option>
+                <option value="network">Сетевая проблема</option>
+            </select>
 
-        <label for="description">Описание проблемы:</label>
-        <textarea id="description" name="description" required></textarea>
+            <label for="description">Описание проблемы:</label>
+            <textarea id="description" name="description" required placeholder="Опишите проблему..."></textarea>
 
-        <button type="submit">Отправить заявку</button>
-    </form>
+            <button type="submit">Отправить заявку</button>
+        </form>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
