@@ -1,3 +1,4 @@
+/* Основные стили для всего документа */
 body {
     font-family: 'Roboto', sans-serif; /* Шрифт страницы */
     background-color: #f0f4f8; /* Цвет фона */
@@ -14,25 +15,30 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тень контейнера */
 }
 
+/* Заголовок */
 h2 {
     color: #333; /* Цвет заголовка */
     text-align: center; /* Центрирование заголовка */
     margin-bottom: 20px; /* Отступ снизу */
 }
 
+/* Описание */
 p {
     color: #666; /* Цвет текста */
     text-align: center; /* Центрирование текста */
     margin-bottom: 30px; /* Отступ снизу */
 }
 
+/* Метки */
 label {
     display: block; /* Отображаем метки как блоки */
     margin: 15px 0 5px; /* Отступы для меток */
     font-weight: bold; /* Жирный шрифт для меток */
 }
 
+/* Поля ввода */
 input[type="text"],
+input[type="email"],
 select,
 textarea {
     width: 100%; /* Ширина полей ввода */
@@ -41,37 +47,4 @@ textarea {
     border-radius: 5px; /* Закругленные углы */
     margin-bottom: 20px; /* Отступы между полями */
     font-size: 14px; /* Размер шрифта полей */
-    transition: border 0.3s; /* Плавный переход для границы */
-}
-
-input[type="text"]:focus,
-select:focus,
-textarea:focus {
-    border: 1px solid #007BFF; /* Цвет границы при фокусе */
-}
-
-button {
-    background-color: #007BFF; /* Цвет кнопки */
-    color: white; /* Цвет текста кнопки */
-    border: none; /* Убираем границу */
-    padding: 12px 20px; /* Внутренние отступы кнопки */
-    border-radius: 5px; /* Закругленные углы кнопки */
-    cursor: pointer; /* Курсор при наведении */
-    font-size: 16px; /* Размер шрифта кнопки */
-    transition: background-color 0.3s; /* Плавный переход для фона */
-    width: 100%; /* Ширина кнопки */
-}
-
-button:hover {
-    background-color: #0056b3; /* Цвет кнопки при наведении */
-}
-
-.google-form-container {
-    margin-top: 30px; /* Отступ сверху */
-}
-
-iframe {
-    width: 100%; /* Ширина iframe */
-    height: 600px; /* Высота iframe */
-    border: none; /* Убираем границу */
-}
+    transition: border 0.3s; /* Плавный переход 
