@@ -1,7 +1,7 @@
 /* Основные стили для всего документа */
 body {
     font-family: 'Roboto', sans-serif; /* Шрифт страницы */
-    background-color: #f0f4f8; /* Цвет фона */
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /* Градиентный фон */
     margin: 0; /* Убираем отступы по умолчанию */
     padding: 0; /* Убираем внутренние отступы */
 }
