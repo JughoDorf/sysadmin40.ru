@@ -20,8 +20,8 @@ body {
 /* Контейнер страницы */
 .container {
     width: 95%;
-    max-width: 800px; /* Максимальная ширина контейнера */
-    padding: 30px;
+    max-width: 900px; /* Максимальная ширина контейнера */
+    padding: 10px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -70,6 +70,6 @@ body {
     }
 
     .form-container iframe {
-        min-height: 550px;
+        min-height: 650px;
     }
 }
