@@ -1,45 +1,53 @@
-/* Основные стили для всего документа */
+/* Основные настройки */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 body {
-    font-family: 'Roboto', sans-serif; /* Шрифт страницы */
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /* Градиентный фон */
-    margin: 0; /* Убираем отступы по умолчанию */
-    padding: 0; /* Убираем внутренние отступы */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
 }
 
-/* Контейнер для формы */
+/* Контейнер страницы */
 .container {
-    max-width: 700px; /* Максимальная ширина контейнера */
-    margin: 50px auto; /* Центрирование контейнера */
-    padding: 20px; /* Внутренние отступы */
-    background-color: #ffffff; /* Цвет фона контейнера */
-    border-radius: 10px; /* Закругленные углы */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тень контейнера */
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Заголовок */
-h2 {
-    color: #333; /* Цвет заголовка */
-    text-align: center; /* Центрирование заголовка */
-    margin-bottom: 15px; /* Отступ снизу */
+/* Заголовок и описание */
+.container h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-/* Описание */
-p {
-    color: #666; /* Цвет текста */
-    text-align: center; /* Центрирование текста */
-    margin-bottom: 20px; /* Отступ снизу */
+.container p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #cfcfcf;
 }
 
-/* Контейнер для Google Формы */
-.google-form-container {
-    margin-top: 20px; /* Отступ сверху */
+/* Стиль для контейнера формы */
+.form-container {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* iframe для формы */
-iframe {
-    width: 100%; /* Ширина iframe */
-    height: 750px; /* Высота iframe (можете настроить под себя) */
-    border: none; /* Убираем границу */
-    border-radius: 5px; /* Закругленные углы */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для iframe */
+/* Настройка размера iframe */
+.form-container iframe {
+    border-radius: 10px;
+    border: none;
 }
