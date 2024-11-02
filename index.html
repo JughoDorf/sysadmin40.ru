@@ -16,9 +16,8 @@
       <label for="room">Кабинет:</label>
       <input type="text" id="room" name="entry.1070222245" placeholder="Номер кабинета" required>
 
-      <!-- Секция для выбора типа проблемы с новым дизайном -->
       <label for="issueType">Тип проблемы:</label>
-      <select id="issueType" name="entry.TYPE_ENTRY_ID" required>
+      <select id="issueType" name="entry.1477963801" required>
         <option value="" disabled selected>Выберите тип проблемы</option>
         <option value="Сетевая проблема">Сетевая проблема</option>
         <option value="Проблема оборудования">Проблема оборудования</option>
@@ -36,19 +35,6 @@
     <p id="successMessage">Заявка успешно отправлена!</p>
   </div>
 
-  <script>
-    // Функция для автоматического изменения высоты textarea
-    function autoResize(textarea) {
-      textarea.style.height = 'auto'; // Сброс высоты
-      textarea.style.height = textarea.scrollHeight + 'px'; // Устанавливаем высоту в зависимости от содержимого
-    }
-
-    function showSuccessMessage() {
-      document.getElementById('successMessage').style.display = 'block';
-      setTimeout(() => {
-        document.getElementById('successMessage').style.display = 'none';
-      }, 3000);
-    }
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
