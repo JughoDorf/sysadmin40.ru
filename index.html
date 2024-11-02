@@ -5,11 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Заявка системному администратору</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Стили для сообщения об успешной отправке */
+    #successMessage {
+      display: none; /* Скрываем сообщение по умолчанию */
+      color: green;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h1>Заявка системному администратору</h1>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdpQoFwSu-YUilChpejwLukqsuj4itHOIkvrRNI13mM6vUVhQ/viewform?usp=sf_link/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdpQoFwSu-YUilChpejwLukqsuj4itHOIkvrRNI13mM6vUVhQ/formResponse" method="POST" target="hidden_iframe" onsubmit="showSuccessMessage();">
       <label for="name">ФИО:</label>
       <input type="text" id="name" name="entry.769920428" placeholder="Введите ваше имя" required>
 
@@ -22,6 +31,20 @@
       <button type="submit">Отправить заявку</button>
     </form>
     <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <!-- Сообщение об успешной отправке -->
+    <p id="successMessage">Заявка успешно отправлена!</p>
   </div>
+
+  <script>
+    function showSuccessMessage() {
+      // Показываем сообщение об успешной отправке
+      document.getElementById('successMessage').style.display = 'block';
+      // Скрываем сообщение через 3 секунды
+      setTimeout(() => {
+        document.getElementById('successMessage').style.display = 'none';
+      }, 3000);
+    }
+  </script>
 </body>
 </html>
