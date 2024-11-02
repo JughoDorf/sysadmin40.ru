@@ -1,37 +1,75 @@
+/* Фон и стили для страницы */
 body {
   font-family: Arial, sans-serif;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+  color: #f9f9f9;
 }
 
+/* Контейнер для формы */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Заголовок */
 h1 {
-  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #4dd0e1;
+}
+
+/* Стили для формы */
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-  display: block;
+  text-align: left;
   margin-top: 15px;
+  font-size: 1em;
 }
 
 input, textarea {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #4dd0e1;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #f9f9f9;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.3s ease;
 }
 
+input:focus, textarea:focus {
+  border: 1px solid #80deea;
+}
+
+/* Стили для кнопки */
 button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 15px;
+  margin-top: 20px;
+  padding: 12px;
+  background: #4dd0e1;
+  color: #1a1a1a;
+  font-size: 1.1em;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #45a049;
+  background: #80deea;
 }
