@@ -10,14 +10,14 @@
   <div class="container">
     <h1>Заявка системному администратору</h1>
     <form action="https://formspree.io/YOUR_EMAIL" method="POST">
-      <label for="name">Имя и фамилия:</label>
-      <input type="text" id="name" name="name" required>
+      <label for="name">ФИО:</label>
+      <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <label for="room">Кабинет:</label>
+      <input type="number" id="room" name="room" placeholder="Номер кабинета" required>
 
       <label for="issue">Описание проблемы:</label>
-      <textarea id="issue" name="issue" rows="5" required></textarea>
+      <textarea id="issue" name="issue" rows="5" placeholder="Опишите вашу проблему" required></textarea>
 
       <button type="submit">Отправить заявку</button>
     </form>
