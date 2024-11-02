@@ -13,6 +13,43 @@
       margin-top: 20px;
       font-size: 16px;
     }
+
+    /* Общие стили для input, select, textarea */
+    input, select, textarea {
+      width: 100%; /* Фиксированная ширина */
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px; /* Закругленные углы */
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    /* Стиль для фокусного состояния */
+    input:focus, select:focus, textarea:focus {
+      border-color: #0073e6; /* Синий цвет при фокусе */
+    }
+
+    /* Стили для select */
+    select {
+      appearance: none; /* Убираем стандартный стиль браузера */
+      background-color: white; /* Белый фон */
+      cursor: pointer;
+      font-family: inherit; /* Наследуем шрифт от родителя */
+      background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="gray"><path d="M7 10l5 5 5-5H7z"/></svg>'); /* Стрелка */
+      background-repeat: no-repeat;
+      background-position: right 10px top 50%;
+      padding-right: 30px; /* Оставляем место для стрелки */
+    }
+
+    /* Стили для textarea с авто-расширением */
+    textarea {
+      overflow: hidden; /* Скрытие полосы прокрутки */
+      resize: none; /* Отключение возможности изменения размера */
+    }
   </style>
 </head>
 <body>
@@ -25,9 +62,9 @@
       <label for="room">Кабинет:</label>
       <input type="text" id="room" name="entry.1070222245" placeholder="Номер кабинета" required>
 
-      <!-- Новая секция для выбора типа проблемы -->
+      <!-- Секция для выбора типа проблемы с новым дизайном -->
       <label for="issueType">Тип проблемы:</label>
-      <select id="issueType" name="entry.1477963801" required>
+      <select id="issueType" name="entry.TYPE_ENTRY_ID" required>
         <option value="" disabled selected>Выберите тип проблемы</option>
         <option value="Сетевая проблема">Сетевая проблема</option>
         <option value="Проблема оборудования">Проблема оборудования</option>
@@ -35,7 +72,7 @@
       </select>
 
       <label for="issue">Описание проблемы:</label>
-      <textarea id="issue" name="entry.114403017" rows="5" placeholder="Опишите вашу проблему" required></textarea>
+      <textarea id="issue" name="entry.114403017" rows="5" placeholder="Опишите вашу проблему" oninput="autoResize(this)" required></textarea>
 
       <button type="submit">Отправить заявку</button>
     </form>
@@ -46,10 +83,14 @@
   </div>
 
   <script>
+    // Функция для автоматического изменения высоты textarea
+    function autoResize(textarea) {
+      textarea.style.height = 'auto'; // Сброс высоты
+      textarea.style.height = textarea.scrollHeight + 'px'; // Устанавливаем высоту в зависимости от содержимого
+    }
+
     function showSuccessMessage() {
-      // Показываем сообщение об успешной отправке
       document.getElementById('successMessage').style.display = 'block';
-      // Скрываем сообщение через 3 секунды
       setTimeout(() => {
         document.getElementById('successMessage').style.display = 'none';
       }, 3000);
