@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SYSADMIN40</title>
+  <title>Заявка системному администратору</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     /* Стили для сообщения об успешной отправке */
@@ -24,6 +24,15 @@
 
       <label for="room">Кабинет:</label>
       <input type="text" id="room" name="entry.1070222245" placeholder="Номер кабинета" required>
+
+      <!-- Новая секция для выбора типа проблемы -->
+      <label for="issueType">Тип проблемы:</label>
+      <select id="issueType" name="entry.1477963801" required>
+        <option value="" disabled selected>Выберите тип проблемы</option>
+        <option value="Сетевая проблема">Сетевая проблема</option>
+        <option value="Проблема оборудования">Проблема оборудования</option>
+        <option value="Проблема ПО">Проблема ПО</option>
+      </select>
 
       <label for="issue">Описание проблемы:</label>
       <textarea id="issue" name="entry.114403017" rows="5" placeholder="Опишите вашу проблему" required></textarea>
