@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <title>SYSADMIN40</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYSADMIN40</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png"> <!-- Добавлено favicon -->
 </head>
 <body>
-    <div class="container">
-        <h1>Заявка системному администратору</h1>
-        <form id="applicationForm">
-            <label for="name">ФИО:</label>
-            <input type="text" id="name" name="entry.769920428" required>
 
-            <label for="cabinet">Кабинет:</label>
-            <input type="text" id="cabinet" name="entry.1070222245" required>
+  <div class="container">
+    <h1>Заявка системному администратору</h1>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdpQoFwSu-YUilChpejwLukqsuj4itHOIkvrRNI13mM6vUVhQ/formResponse" method="POST" target="hidden_iframe" onsubmit="showLoading();">
+      <label for="name">ФИО:</label>
+      <input type="text" id="name" name="entry.769920428" placeholder="Введите ваше имя" required>
 
-            <label for="issueType">Тип проблемы:</label>
-            <select id="issueType" name="entry.1477963801" required>
-                <option value="Сетевая проблема">Сетевая проблема</option>
-                <option value="Проблема оборудования">Проблема оборудования</option>
-                <option value="Проблема ПО">Проблема ПО</option>
-            </select>
+      <label for="room">Кабинет:</label>
+      <input type="text" id="room" name="entry.1070222245" placeholder="Номер кабинета" required>
 
-            <label for="description">Описание проблемы:</label>
-            <textarea id="description" name="entry.114403017" rows="4" required></textarea>
+      <label for="issueType">Тип проблемы:</label>
+      <select id="issueType" name="entry.1477963801" required>
+        <option value="" disabled selected>Выберите тип проблемы</option>
+        <option value="Сетевая проблема">Сетевая проблема</option>
+        <option value="Проблема оборудования">Проблема оборудования</option>
+        <option value="Проблема ПО">Проблема ПО</option>
+      </select>
 
-            <button type="submit">Отправить заявку</button>
-        </form>
+      <label for="issue">Описание проблемы:</label>
+      <textarea id="issue" name="entry.114403017" rows="5" placeholder="Опишите вашу проблему" oninput="autoResize(this)" required></textarea>
 
-        <div id="successMessage" class="hidden">
-            <span class="checkmark">&#10003;</span>
-            <p>Заявка успешно отправлена</p>
-        </div>
+      <button type="submit">Отправить заявку</button>
+    </form>
+    <iframe name="hidden_iframe" style="display:none;" onload="showSuccessModal();"></iframe>
+  </div>
+
+  <!-- Модальное окно об успешной отправке -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="success-message">
+        <div class="checkmark" id="checkmark"></div>
+        <p>Заявка успешно отправлена!</p>
+      </div>
     </div>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- Экран загрузки -->
+  <div id="loading" class="loading">
+    <div class="loading-content">
+      <p>Загрузка...</p>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
