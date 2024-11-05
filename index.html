@@ -26,6 +26,12 @@
       <label for="issue">Описание проблемы:</label>
       <textarea id="issue" name="entry.114403017" rows="5" placeholder="Опишите вашу проблему" oninput="autoResize(this)" required></textarea>
       <button type="submit">Отправить заявку</button>
+      <!-- Кнопка отправки заявки -->
+      <button type="submit" id="submitButton">Отправить заявку</button>
+<!-- Кнопка со ссылкой на Google Таблицу -->
+<div style="margin-top: 10px;">
+  <a href="https://docs.google.com/spreadsheets/d/1GchHnTu0b_2ZlXcmE0cuGbwBV0jN41JWOzyCk0DppCE/edit?usp=sharing" target="_blank" class="table-link-button">Открыть таблицу заявок</a>
+</div>
     </form>
     <iframe name="hidden_iframe" style="display:none;" onload="showSuccessModal();"></iframe>
   </div>
