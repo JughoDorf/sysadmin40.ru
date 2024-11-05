@@ -4,8 +4,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #ffffff 50%, #f0f0f0 50%);
+  font-family: 'Comfortaa', sans-serif;
   margin: 0;
 }
 
