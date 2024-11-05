@@ -1,166 +1,67 @@
-/* Основные настройки страницы */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Центрируем по вертикали */
-  min-height: 100vh;
-  background: linear-gradient(25deg, #ffffff 50%, #f0f0f0 50%);
-  font-family: 'Comfortaa', sans-serif;
-}
-/* Контейнер формы */
-.container {
-  width: 100%;
-  max-width: 500px;
-  padding: 30px;
-  background: #f8f9fa;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-/* Заголовок формы */
-h1 {
-  text-align: center;
-  color: #1a1a2e;
-  font-size: 32px; /* Увеличен размер шрифта заголовка */
-  margin-bottom: 20px;
-  font-weight: 700; /* Жирный шрифт */
-}
-/* Общие стили для input, select, textarea */
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ced4da;
-  border-radius: 8px;
-  font-size: 16px;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-  color: #1a1a2e;
-  background-color: #fff;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-/* Стили для фокуса */
-input:focus, select:focus, textarea:focus {
-  border-color: #4ecca3;
-  box-shadow: 0 0 8px rgba(78, 204, 163, 0.5);
-}
-/* Стили для select */
-select {
-  appearance: none;
-  background-color: white;
-  font-family: inherit;
-  cursor: pointer;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="gray"><path d="M7 10l5 5 5-5H7z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  padding-right: 35px;
-}
-/* Стили для textarea с авто-расширением */
-textarea {
-  overflow: hidden;
-  resize: none;
-}
-/* Кнопка отправки */
-button {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007bff; /* Синий цвет фона */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-button:hover {
-  background-color: #0056b3; /* Темно-синий при наведении */
-}
-button:active {
-  transform: scale(0.98);
-}
-/* Модальное окно */
-.modal {
-  display: none; /* Скрыто по умолчанию */
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-/* Содержимое модального окна */
-.modal-content {
-  background-color: #f8f9fa;
-  margin: 10% auto; /* Уменьшен отступ сверху */
-  padding: 30px; /* Увеличен отступ внутри контейнера */
-  width: 80%; /* Ширина контейнера */
-  max-width: 400px; /* Максимальная ширина */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: #1a1a2e;
-}
-/* Стили для галочки */
-.checkmark {
-  width: 24px; /* Ширина галочки */
-  height: 24px; /* Высота галочки */
-  border: 3px solid #4ecca3; /* Цвет рамки */
-  background-color: white; /* Цвет фона */
-  border-radius: 50%; /* Круглая форма */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px; /* Отступ справа */
-  animation: scale-in 0.4s forwards; /* Анимация появления */
-}
-/* Анимация появления галочки */
-@keyframes scale-in {
-  0% {
-    transform: scale(0); /* Начальный масштаб */
-  }
-  100% {
-    transform: scale(1); /* Конечный масштаб */
-  }
-}
-/* Галочка внутри круга */
-.checkmark::after {
-  content: '';
-  width: 10px; /* Ширина галочки */
-  height: 5px; /* Высота галочки */
-  border: solid #4ecca3; /* Цвет галочки */
-  border-width: 0 3px 3px 0; /* Толщина галочки */
-  transform: rotate(45deg); /* Поворот для создания галочки */
-  animation: draw-check 0.4s forwards; /* Анимация рисования галочки */
-}
-/* Анимация рисования галочки */
-@keyframes draw-check {
-  0% {
-    width: 0; /* Начальная ширина */
-    height: 0; /* Начальная высота */
-  }
-  100% {
-    width: 10px; /* Конечная ширина */
-    height: 5px; /* Конечная высота */
-  }
-}
-/* Экран загрузки */
-.loading {
-  display: none; /* Скрыто по умолчанию */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
-  justify-content: center;
-  align-items: center;
+    font-family: 'Comfortaa', sans-serif;
+    background: linear-gradient(25deg, #f0f0f0, #e0e0e0);
+    margin: 0;
+    padding: 0;
 }
 
-/* Содержимое экрана загрузки */
-.loading-content {
-  text-align: center;
-  font-size: 24px;
-  color: #1a1a2e;
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+#successMessage {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.checkmark {
+    color: green;
+    font-size: 30px;
 }
