@@ -73,7 +73,7 @@ button {
   padding: 12px;
   font-size: 16px;
   color: #fff;
-  background-color: #4ecca3;
+  background-color: #007bff; /* Синий цвет фона */
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -81,7 +81,7 @@ button {
 }
 
 button:hover {
-  background-color: #3ba285;
+  background-color: #0056b3; /* Темно-синий при наведении */
 }
 
 button:active {
