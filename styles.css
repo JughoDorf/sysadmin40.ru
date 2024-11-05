@@ -23,8 +23,9 @@ body {
 h1 {
   text-align: center;
   color: #1a1a2e;
-  font-size: 24px;
+  font-size: 32px; /* Увеличен размер шрифта заголовка */
   margin-bottom: 20px;
+  font-weight: 700; /* Жирный шрифт */
 }
 
 /* Общие стили для input, select, textarea */
