@@ -92,10 +92,10 @@ button:active {
 /* Содержимое модального окна */
 .modal-content {
   background-color: #f8f9fa;
-  margin: 15% auto;
-  padding: 20px;
-  width: 80%;
-  max-width: 300px;
+  margin: 10% auto; /* Уменьшен отступ сверху */
+  padding: 30px; /* Увеличен отступ внутри контейнера */
+  width: 80%; /* Ширина контейнера */
+  max-width: 400px; /* Максимальная ширина */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -157,6 +157,7 @@ button:active {
   justify-content: center;
   align-items: center;
 }
+
 /* Содержимое экрана загрузки */
 .loading-content {
   text-align: center;
