@@ -1,21 +1,16 @@
 function showLoading() {
-  document.getElementById('loading').style.display = 'flex'; // Показать экран загрузки
+  document.getElementById('loading').style.display = 'flex';
 }
 
-function closeModal() {
-  document.getElementById('successModal').style.display = 'none'; // Закрыть модальное окно
+function hideLoading() {
+  document.getElementById('loading').style.display = 'none';
 }
 
 function showSuccessModal() {
-  // Показать модальное окно об успешной отправке через 2 секунды
-  setTimeout(() => {
-    document.getElementById('loading').style.display = 'none'; // Скрыть экран загрузки
-    document.getElementById('successModal').style.display = 'block'; // Показать модальное окно
-  }, 2000); // Задержка перед показом окна успешной отправки
+  hideLoading();
+  document.getElementById('successModal').style.display = 'block';
 }
 
-// Авто-расширение textarea
-function autoResize(textarea) {
-  textarea.style.height = 'auto'; // Сбрасываем высоту
-  textarea.style.height = textarea.scrollHeight + 'px'; // Устанавливаем новую высоту
+function closeModal() {
+  document.getElementById('successModal').style.display = 'none';
 }
