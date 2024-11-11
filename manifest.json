@@ -1,7 +1,7 @@
 {
   "name": "Заявки SYSADMIN40",
   "short_name": "Заявки",
-  "start_url": "/",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
