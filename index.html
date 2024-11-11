@@ -6,8 +6,12 @@
   <title>SYSADMIN40</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.png" type="image/png"> <!-- Добавлено favicon -->
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="favicon.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="favicon.png" sizes="512x512">
 </head>
 <body>
   <div class="container">
@@ -27,10 +31,6 @@
       <label for="issue">Описание проблемы:</label>
       <textarea id="issue" name="entry.114403017" rows="5" placeholder="Опишите вашу проблему" oninput="autoResize(this)" required></textarea>
       <button type="submit">Отправить заявку</button>
-<!-- Кнопка со ссылкой на Google Таблицу -->
-<div style="margin-top: 10px;">
-  <a href="https://docs.google.com/spreadsheets/d/1GchHnTu0b_2ZlXcmE0cuGbwBV0jN41JWOzyCk0DppCE/edit?usp=sharing" target="_blank" class="table-link-button">Открыть таблицу заявок</a>
-</div>
     </form>
     <iframe name="hidden_iframe" style="display:none;" onload="showSuccessModal();"></iframe>
   </div>
@@ -51,5 +51,6 @@
     </div>
   </div>
   <script src="scripts.js"></script>
+  <script src="service-worker.js"></script>
 </body>
 </html>
