@@ -2,7 +2,7 @@
   "name": "SYSADMIN40",
   "short_name": "Admin40App",
   "description": "Приложение для отправки заявок системному администратору",
-  "start_url": "/index.html",
+  "start_url": "/sysadmin40.ru",
   "display": "standalone",
   "background_color": "#f0f0f0",
   "theme_color": "#007bff",
