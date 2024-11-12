@@ -1,18 +1,27 @@
-// Функция для показа экрана загрузки
+// Показать загрузочный экран
 function showLoading() {
-    document.getElementById("loading").style.display = "flex";
+  document.getElementById('loading').style.display = 'flex';
 }
-// Функция для показа модального окна
+
+// Показать модальное окно после отправки
 function showSuccessModal() {
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("successModal").style.display = "flex";
+  const loadingScreen = document.getElementById('loading');
+  const successModal = document.getElementById('successModal');
+
+  if (loadingScreen.style.display === 'flex') {
+    loadingScreen.style.display = 'none'; // Скрыть загрузочный экран
+    successModal.style.display = 'flex';   // Показать модальное окно
+  }
 }
-// Функция для закрытия модального окна
+
+// Закрыть модальное окно
 function closeModal() {
-    document.getElementById("successModal").style.display = "none";
+  document.getElementById('successModal').style.display = 'none';
 }
-// Функция для авто-расширения textarea
+
+// Автоизменение размера textarea
 function autoResize(textarea) {
-    textarea.style.height = "auto";
-    textarea.style.height = (textarea.scrollHeight) + "px";
+  textarea.style.height = 'auto';  // Сброс высоты, чтобы вычислить новую
+  textarea.style.height = (textarea.scrollHeight) + 'px'; // Устанавливаем высоту на основе содержимого
 }
+

@@ -1,11 +1,11 @@
 {
   "name": "SYSADMIN40",
   "short_name": "Admin40App",
-  "description": "Приложение для отправки заявок системному администратору",
+  "description": "Заявка системному администратору",
   "start_url": "/sysadmin40.ru",
   "display": "standalone",
-  "background_color": "#f0f0f0",
-  "theme_color": "#007bff",
+  "background_color": "#f5a623",
+  "theme_color": "#f5a623",
   "icons": [
     {
       "src": "favicon.png",

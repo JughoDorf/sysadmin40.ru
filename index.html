@@ -8,14 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="favicon.png" type="image/png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" href="favicon.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="favicon.png" sizes="512x512">
 </head>
 <body>
   <div class="container">
-    <h1>Заявка системному администратору</h1>
+    <div class="header">
+      <img src="favicon.png" alt="Логотип" class="logo">
+      <h1>Заявка системному администратору</h1>
+    </div>
     <form action="https://docs.google.com/forms/d/e/1FAIpQLSdpQoFwSu-YUilChpejwLukqsuj4itHOIkvrRNI13mM6vUVhQ/formResponse" method="POST" target="hidden_iframe" onsubmit="showLoading();">
       <label for="name">ФИО:</label>
       <input type="text" id="name" name="entry.769920428" placeholder="Введите ваше имя" required>
@@ -31,8 +30,8 @@
       <label for="issue">Описание проблемы:</label>
       <textarea id="issue" name="entry.114403017" rows="5" placeholder="Опишите вашу проблему" oninput="autoResize(this)" required></textarea>
       <button type="submit">Отправить заявку</button>
-      <a href="https://docs.google.com/spreadsheets/d/1GchHnTu0b_2ZlXcmE0cuGbwBV0jN41JWOzyCk0DppCE/edit?usp=sharing" target="_blank" class="small-button">Открыть таблицу заявок</a>
     </form>
+    <a href="https://docs.google.com/spreadsheets/d/1GchHnTu0b_2ZlXcmE0cuGbwBV0jN41JWOzyCk0DppCE/edit?usp=sharing" target="_blank" class="open-table-button">Открыть таблицу заявок</a>
     <iframe name="hidden_iframe" style="display:none;" onload="showSuccessModal();"></iframe>
   </div>
   <!-- Модальное окно об успешной отправке -->
