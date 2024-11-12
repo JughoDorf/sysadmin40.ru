@@ -1,7 +1,6 @@
 /* Основные стили */
 * {
-  margin: 0;
-  padding: 0;
+  padding: 1;
   box-sizing: border-box;
   font-family: 'Comfortaa', sans-serif;
 }
@@ -29,10 +28,10 @@ body {
 
 .container {
   width: 95%;               /* Увеличен процент ширины */
-  max-width: 500px;          /* Увеличена максимальная ширина */
+  max-width: 510px;          /* Увеличена максимальная ширина */
   background: #fff;
-  border-radius: 16px;
-  padding: 30px;             /* Увеличен отступ */
+  border-radius: 18px;
+  padding: 25px;             /* Увеличен отступ */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
@@ -177,9 +176,9 @@ button:hover {
 }
 
 .logo {
-  width: 90px; /* Задайте размер логотипа по необходимости */
+  width: 100px; /* Задайте размер логотипа по необходимости */
   height: auto;
-  margin-right: 1px; /* Расстояние между логотипом и заголовком */
+  margin-right: -10px; /* Расстояние между логотипом и заголовком */
 }
 
 h1 {
