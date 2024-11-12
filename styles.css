@@ -145,12 +145,11 @@ button:hover {
   background: rgba(255, 255, 255, 0.9);
   align-items: center;
   justify-content: center;
-  opacity: 0; /* Скрыть по умолчанию */
-  transition: opacity 0.3s ease; /* Плавное появление */
 }
 
-.loading.show {
-  opacity: 1; /* Отображаем экран загрузки */
+.loading-content {
+  font-size: 20px;
+  color: #333;
 }
 
 
