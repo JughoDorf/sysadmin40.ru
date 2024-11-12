@@ -1,6 +1,11 @@
 // Показать загрузочный экран
 function showLoading() {
-  document.getElementById('loading').style.display = 'flex';
+  document.getElementById('loading').style.display = 'flex'; // Показываем экран загрузки
+
+  // Задержка перед отправкой формы (например, 2 секунды)
+  setTimeout(function() {
+    document.forms[0].submit(); // Отправляем форму
+  }, 2000); // 2000 миллисекунд = 2 секунды
 }
 
 // Показать модальное окно после отправки
@@ -18,10 +23,3 @@ function showSuccessModal() {
 function closeModal() {
   document.getElementById('successModal').style.display = 'none';
 }
-
-// Автоизменение размера textarea
-function autoResize(textarea) {
-  textarea.style.height = 'auto';  // Сброс высоты, чтобы вычислить новую
-  textarea.style.height = (textarea.scrollHeight) + 'px'; // Устанавливаем высоту на основе содержимого
-}
-
