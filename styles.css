@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'TeletactileLatCyr';
-  src: url('TeletactileLatCyr.ttf') format('truetype');
+  src: url('./TeletactileLatCyr.ttf') format('truetype'); /* Используйте ./ если файл в корне */
   font-weight: normal;
   font-style: normal;
 }
@@ -24,7 +24,6 @@ body {
   align-items: center;
   height: 100vh;
 }
-
 
 /* Анимация перелива градиента */
 @keyframes gradientAnimation {
@@ -142,7 +141,6 @@ button:hover {
   margin-bottom: 10px;
 }
 
-
 /* Загрузочный экран */
 .loading {
   display: none;
@@ -160,7 +158,6 @@ button:hover {
   font-size: 20px;
   color: #333;
 }
-
 
 .open-table-button {
   display: block;
