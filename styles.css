@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-  font-family: 'TeletactileRus', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77, #778da9); /* Темно-синий градиент */
   background-size: 400% 400%; /* Увеличенный размер для плавного анимационного эффекта */
   animation: gradientAnimation 15s ease infinite; /* Анимация градиента */
