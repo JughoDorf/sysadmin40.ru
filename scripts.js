@@ -31,28 +31,4 @@ function autoResize(textarea) {
   textarea.style.height = (textarea.scrollHeight) + 'px'; // Устанавливаем высоту на основе содержимого
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const snowContainer = document.querySelector('.snow');
-
-  function createSnowflake() {
-    const snowflake = document.createElement('div');
-    snowflake.classList.add('snowflake');
-
-    // Случайное начальное положение и размер снежинки
-    snowflake.style.left = `${Math.random() * 100}vw`;
-    snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Скорость падения
-    snowflake.style.opacity = Math.random();
-
-    // Добавляем снежинку в контейнер
-    snowContainer.appendChild(snowflake);
-
-    // Удаляем снежинку после завершения анимации
-    snowflake.addEventListener('animationend', () => {
-      snowflake.remove();
-    });
-  }
-
-  // Создаём снежинки каждые 100 мс
-  setInterval(createSnowflake, 200);
-});
 
