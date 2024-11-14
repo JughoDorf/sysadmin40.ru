@@ -27,6 +27,7 @@ body {
   height: 100vh;
 }
 
+
 /* Анимация перелива градиента */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
@@ -36,22 +37,22 @@ body {
 
 /* Контейнер */
 .container {
-  width: 95%;
-  max-width: 510px;
+  width: 95%;               /* Увеличен процент ширины */
+  max-width: 510px;          /* Увеличена максимальная ширина */
   background: #fff;
   border-radius: 18px;
-  position: relative;
-  z-index: 1; /* Контейнер выше гирлянды */
-  padding: 25px;
+  padding: 25px;             /* Увеличен отступ */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
+
 
 .container h1 {
   font-size: 26px;           /* Увеличен размер шрифта заголовка */
   font-weight: 700;
   color: #333;
 }
+
 
 label {
   display: block;
@@ -143,6 +144,7 @@ button:hover {
   margin-bottom: 10px;
 }
 
+
 /* Загрузочный экран */
 .loading {
   display: none;
@@ -161,6 +163,7 @@ button:hover {
   color: #333;
 }
 
+
 .open-table-button {
   display: block;
   width: 100%;
@@ -169,8 +172,8 @@ button:hover {
   background: #4CAF50;
   color: #fff;
   text-align: center;
-  font-family: 'TeletactileRus', sans-serif;
   text-decoration: none;
+  font-family: 'TeletactileRus', sans-serif;
   font-size: 18px;
   font-weight: bold;
   border-radius: 25px;
@@ -201,7 +204,7 @@ button:hover {
 
 h1 {
   font-family: 'TeletactileRus', sans-serif;
-  font-size: 24px; /* Настройте размер по необходимости */
+  font-size: 24px;
   font-weight: bold;
 }
 
