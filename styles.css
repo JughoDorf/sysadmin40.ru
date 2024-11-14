@@ -5,6 +5,13 @@
   font-family: 'Comfortaa', sans-serif;
 }
 
+@font-face {
+  font-family: 'TeletactileLatCyr';
+  src: url('fonts/TeletactileLatCyr.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: 'Comfortaa', sans-serif;
@@ -26,23 +33,24 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+/* Контейнер */
 .container {
-  width: 95%;               /* Увеличен процент ширины */
-  max-width: 510px;          /* Увеличена максимальная ширина */
+  width: 95%;
+  max-width: 510px;
   background: #fff;
   border-radius: 18px;
-  padding: 25px;             /* Увеличен отступ */
+  position: relative;
+  z-index: 1; /* Контейнер выше гирлянды */
+  padding: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
-
 
 .container h1 {
   font-size: 26px;           /* Увеличен размер шрифта заголовка */
   font-weight: 700;
   color: #333;
 }
-
 
 label {
   display: block;
@@ -70,6 +78,7 @@ button {
   border: none;
   border-radius: 25px;
   color: #fff;
+  font-family: 'TeletactileLatCyr', sans-serif;
   font-size: 18px;           /* Увеличен размер шрифта кнопки */
   font-weight: bold;
   cursor: pointer;
@@ -161,6 +170,7 @@ button:hover {
   background: #4CAF50;
   color: #fff;
   text-align: center;
+  font-family: 'TeletactileLatCyr', sans-serif;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -191,7 +201,8 @@ button:hover {
 }
 
 h1 {
-  font-size: 24px;
+  font-family: 'TeletactileLatCyr', sans-serif;
+  font-size: 24px; /* Настройте размер по необходимости */
   font-weight: bold;
 }
 
