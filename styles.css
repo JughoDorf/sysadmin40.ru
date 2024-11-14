@@ -7,9 +7,9 @@
 
 @font-face {
     font-family: 'TeletactileLatCyr';
-    src: url('TeletactileLatCyr.woff2') format('woff2'),
-         url('TeletactileLatCyr.woff') format('woff'),
-         url('TeletactileLatCyr.ttf') format('truetype');
+    src: url('./TeletactileLatCyr.woff2') format('woff2'),
+         url('./TeletactileLatCyr.woff') format('woff'),
+         url('./TeletactileLatCyr.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
