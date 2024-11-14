@@ -6,10 +6,12 @@
 }
 
 @font-face {
-  font-family: 'TeletactileLatCyr';
-  src: url('./TeletactileLatCyr.ttf') format('truetype'); /* Используйте ./ если файл в корне */
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'TeletactileLatCyr';
+    src: url('fonts/TeletactileLatCyr.woff2') format('woff2'),
+         url('fonts/TeletactileLatCyr.woff') format('woff'),
+         url('fonts/TeletactileLatCyr.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
