@@ -30,5 +30,3 @@ function autoResize(textarea) {
   textarea.style.height = 'auto';  // Сброс высоты, чтобы вычислить новую
   textarea.style.height = (textarea.scrollHeight) + 'px'; // Устанавливаем высоту на основе содержимого
 }
-
-
