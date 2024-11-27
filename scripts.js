@@ -9,20 +9,20 @@ function showLoading(event) {
   }, 2000); // 2000 миллисекунд = 2 секунды
 }
 
-// Показать модальное окно после отправки
-function showSuccessModal() {
-  const loadingScreen = document.getElementById('loading');
-  const successModal = document.getElementById('successModal');
+function showNotification() {
+  const notification = document.getElementById("notification");
 
-  if (loadingScreen.style.display === 'flex') {
-    loadingScreen.style.display = 'none'; // Скрыть загрузочный экран
-    successModal.style.display = 'flex';   // Показать модальное окно
-  }
-}
+  // Показываем уведомление с анимацией вращения
+  notification.style.display = "block";
+  notification.style.animation = "spinIn 0.7s ease forwards";
 
-// Закрыть модальное окно
-function closeModal() {
-  document.getElementById('successModal').style.display = 'none';
+  setTimeout(() => {
+    // Скрываем уведомление с обратной анимацией
+    notification.style.animation = "spinOut 0.7s ease forwards";
+    setTimeout(() => {
+      notification.style.display = "none";
+    }, 700); // Убираем после завершения анимации
+  }, 3000); // Уведомление исчезает через 3 секунды
 }
 
 // Автоизменение размера textarea
@@ -30,3 +30,13 @@ function autoResize(textarea) {
   textarea.style.height = 'auto';  // Сброс высоты, чтобы вычислить новую
   textarea.style.height = (textarea.scrollHeight) + 'px'; // Устанавливаем высоту на основе содержимого
 }
+
+function showNotification() {
+  const notification = document.getElementById("notification");
+  notification.style.display = "block";
+  setTimeout(() => {
+    notification.style.display = "none";
+  }, 3000);
+}
+
+

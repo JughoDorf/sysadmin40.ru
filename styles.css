@@ -208,4 +208,63 @@ h1 {
   font-weight: bold;
 }
 
+/* Анимация появления */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8); /* Уменьшение и прозрачность */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Оригинальный размер и видимость */
+  }
+}
+
+/* Уведомление */
+.notification {
+  display: none;
+  position: fixed;
+  top: 50%; /* Центрируем вертикально */
+  left: 50%; /* Центрируем горизонтально */
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 18px; /* Базовый размер шрифта */
+  max-width: 90%; /* Для ограничения ширины */
+  text-align: center;
+  word-wrap: break-word;
+  animation: fadeInScale 0.5s ease forwards; /* Анимация появления */
+}
+
+/* Для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+  .notification {
+    padding: 25px 40px;
+    font-size: 20px;
+    max-width: 80%;
+  }
+}
+
+/* Для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+  .notification {
+    padding: 30px 50px;
+    font-size: 22px;
+    max-width: 95%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 

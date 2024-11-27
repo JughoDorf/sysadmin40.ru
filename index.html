@@ -15,41 +15,30 @@
       <img src="favicon.png" alt="Логотип" class="logo">
       <h1>Заявка системному администратору</h1>
     </div>
-    <form id="myForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdpQoFwSu-YUilChpejwLukqsuj4itHOIkvrRNI13mM6vUVhQ/formResponse" method="POST" target="hidden_iframe" onsubmit="showLoading(event);">
-  <label for="name">ФИО:</label>
-  <input type="text" id="name" name="entry.769920428" placeholder="Введите ваше имя" required>
-  <label for="room">Кабинет:</label>
-  <input type="text" id="room" name="entry.1070222245" placeholder="Номер кабинета" required>
-  <label for="issueType">Тип проблемы:</label>
-  <select id="issueType" name="entry.1477963801" required>
-    <option value="" disabled selected>Выберите тип проблемы</option>
-    <option value="Сетевая проблема">Сетевая проблема</option>
-    <option value="Проблема оборудования">Проблема оборудования</option>
-    <option value="Проблема ПО">Проблема ПО</option>
-  </select>
-  <label for="issue">Описание проблемы:</label>
-  <textarea id="issue" name="entry.114403017" rows="5" placeholder="Опишите вашу проблему" oninput="autoResize(this)" required></textarea>
-  <button type="submit">Отправить заявку</button>
+    <form id="myForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdpQoFwSu-YUilChpejwLukqsuj4itHOIkvrRNI13mM6vUVhQ/formResponse" method="POST" target="hidden_iframe" onsubmit="showNotification();">
+      <label for="name">ФИО:</label>
+      <input type="text" id="name" name="entry.769920428" placeholder="Введите ваше имя" required>
+      <label for="room">Кабинет:</label>
+      <input type="text" id="room" name="entry.1070222245" placeholder="Номер кабинета" required>
+      <label for="issueType">Тип проблемы:</label>
+      <select id="issueType" name="entry.1477963801" required>
+        <option value="" disabled selected>Выберите тип проблемы</option>
+        <option value="Сетевая проблема">Сетевая проблема</option>
+        <option value="Проблема оборудования">Проблема оборудования</option>
+        <option value="Проблема ПО">Проблема ПО</option>
+      </select>
+      <label for="issue">Описание проблемы:</label>
+      <textarea id="issue" name="entry.114403017" rows="5" placeholder="Опишите вашу проблему" required></textarea>
+      <button type="submit">Отправить заявку</button>
     </form>
     <a href="https://docs.google.com/spreadsheets/d/1GchHnTu0b_2ZlXcmE0cuGbwBV0jN41JWOzyCk0DppCE/edit?usp=sharing" target="_blank" class="open-table-button">Открыть таблицу заявок</a>
-   <iframe name="hidden_iframe" style="display:none;" onload="showSuccessModal();"></iframe>
-  </div>
-  <!-- Модальное окно об успешной отправке -->
-  <div id="successModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <div class="success-message">
-        <div class="checkmark" id="checkmark"></div>
-        <p>Заявка успешно отправлена!</p>
-      </div>
     </div>
+    <iframe name="hidden_iframe" style="display:none;" onload="showSuccessModal();"></iframe>
   </div>
-  <!-- Экран загрузки -->
-  <div id="loading" class="loading">
-    <div class="loading-content">
-      <p>Загрузка...</p>
-    </div>
-  </div>
+  <!-- Уведомление -->
+  <div id="notification" class="notification">
+    Заявка успешно отправлена!
+  </div>  
   <script src="scripts.js"></script>
   <script src="service-worker.js"></script>
 </body>
